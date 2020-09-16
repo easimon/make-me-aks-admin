@@ -1,4 +1,12 @@
-# Make me AKS Cluster-Admin
+# Make me AKS Cluster-Admin (does not work anymore)
+
+## Update
+
+Azure fixed it! In recent tunnelfront installations, the `ConfigMap` `kube-system/tunnelfront-kubecfg` still exists and contains a kubectl config, but it does not contain secrets anymore.
+
+It also does not seem to be dependent on the AKS Kubernetes version you're using, even previously vulnerable 1.16.10 clusters are now fixed (i.e. the oldest version that's still supported at the time of writing this update). So the following is not true for current AKS clusters, and the exploitation script does not work anymore.
+
+## Old, invalid README content starts here
 
 If you rolled out RBAC for Kubernetes on AKS, and a number of users having read-access to it, your cluster is probably vulnerable to privilege escalation by any one of these users.
 
